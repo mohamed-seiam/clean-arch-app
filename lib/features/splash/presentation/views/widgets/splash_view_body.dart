@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+
+class SplashViewBody extends StatelessWidget {
+  const SplashViewBody({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Center(child: Image.asset('assets/images/logo.png'),),
+      ],
+    );
+  }
+}
