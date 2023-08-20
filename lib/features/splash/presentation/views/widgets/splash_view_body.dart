@@ -1,6 +1,9 @@
 import 'package:clean_arch_app/core/utilis/assets.dart';
 import 'package:clean_arch_app/features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../../core/utilis/app_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({Key? key}) : super(key: key);
@@ -16,6 +19,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   @override
   void initState() {
     initSliderAnimation();
+    navigateToHome();
     super.initState();
   }
 
@@ -37,6 +41,11 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
        SlidingText(slidingAnimation: slidingAnimation),
       ],
     );
+  }
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 2), () {
+      GoRouter.of(context).push(AppRouter.kHomeView);
+    });
   }
 }
 
