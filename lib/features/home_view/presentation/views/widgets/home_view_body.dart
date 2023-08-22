@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'custom_app_bar.dart';
 import 'featured_book_list_view.dart';
+import 'newest_books_list_view_item.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({Key? key}) : super(key: key);
@@ -26,6 +27,10 @@ class HomeViewBody extends StatelessWidget {
             style: Styles.style20,
           ),
         ),
+       Padding(
+         padding:  EdgeInsets.symmetric(horizontal: 30.w,vertical: 14.h),
+         child: const NewestBooksListViewItem(),
+       ),
       ],
     );
   }
