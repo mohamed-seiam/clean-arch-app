@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'custom_app_bar.dart';
 import 'featured_book_list_view.dart';
-import 'newest_books_list_view_item.dart';
+import 'best_seller_books_list_view_item.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class HomeViewBody extends StatelessWidget {
           padding:  EdgeInsets.only(left: 18.w),
           child: const FeaturedBookListView(),
         ),
-        SizedBox(height:40.h ,),
+        SizedBox(height:30.h ,),
         Padding(
           padding: EdgeInsets.only(left:30.w),
           child: const Text(
@@ -29,7 +29,7 @@ class HomeViewBody extends StatelessWidget {
         ),
        Padding(
          padding:  EdgeInsets.symmetric(horizontal: 30.w,vertical: 14.h),
-         child: const NewestBooksListViewItem(),
+         child: const BestSellerBooksListViewItem(),
        ),
       ],
     );

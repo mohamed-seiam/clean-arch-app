@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utilis/assets.dart';
 
-class NewestBooksListViewItem extends StatelessWidget {
-  const NewestBooksListViewItem({Key? key}) : super(key: key);
+class BestSellerBooksListViewItem extends StatelessWidget {
+  const BestSellerBooksListViewItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +28,7 @@ class NewestBooksListViewItem extends StatelessWidget {
           ),
           SizedBox(width: 20.w,),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
                 width: MediaQuery.of(context).size.width*.5,
@@ -37,6 +38,14 @@ class NewestBooksListViewItem extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: Styles.style30.copyWith(fontSize: 20),
                 ),
+              ),
+              SizedBox(height: 3.h,),
+           const Text('J.K. Rowling',style: Styles.style14,),
+              SizedBox(height: 3.h,),
+              Row(
+                children: [
+                  Text('19.99\$',style: Styles.style20.copyWith(fontWeight: FontWeight.bold),),
+                ],
               ),
             ],
           ),
