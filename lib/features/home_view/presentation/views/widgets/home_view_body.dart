@@ -10,29 +10,56 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const CustomAppBar(),
-        Padding(
-          padding:  EdgeInsets.only(left: 18.w),
-          child: const FeaturedBookListView(),
-        ),
-        SizedBox(height:30.h ,),
-        Padding(
-          padding: EdgeInsets.only(left:30.w),
-          child: const Text(
-            'Best Seller',
-            style: Styles.style20,
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child:  Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const CustomAppBar(),
+              Padding(
+                padding:  EdgeInsets.only(left: 7.w),
+                child: const FeaturedBookListView(),
+              ),
+              SizedBox(height:30.h ,),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child:  Text(
+                  'Best Seller',
+                  style: Styles.style20,
+                ),
+              ),],
           ),
         ),
-       Padding(
-         padding:  EdgeInsets.symmetric(horizontal: 30.w,vertical: 14.h),
-         child: const BestSellerBooksListViewItem(),
-       ),
+        const SliverFillRemaining(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30),
+            child: BestSellerListView(),
+          ),
+        ),
       ],
     );
   }
 }
+
+class BestSellerListView extends StatelessWidget {
+  const BestSellerListView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      physics: const NeverScrollableScrollPhysics(),
+      padding: EdgeInsets.zero,
+      itemCount: 10,
+        itemBuilder: (context,index){
+          return const Padding(
+            padding:  EdgeInsets.only(bottom: 30,top: 10),
+            child:  BestSellerBooksListViewItem(),
+          );
+        },
+    );
+  }
+}
+
 
 
