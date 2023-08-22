@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utilis/assets.dart';
+import 'book_rating.dart';
 
 class BestSellerBooksListViewItem extends StatelessWidget {
   const BestSellerBooksListViewItem({Key? key}) : super(key: key);
@@ -27,27 +28,31 @@ class BestSellerBooksListViewItem extends StatelessWidget {
             ),
           ),
           SizedBox(width: 20.w,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width*.5,
-                child: Text(
-                  'Harry Potter and the Goblet of Fire',
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: Styles.style30.copyWith(fontSize: 20),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width*.5,
+                  child: Text(
+                    'Harry Potter and the Goblet of Fire',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: Styles.style30.copyWith(fontSize: 20),
+                  ),
                 ),
-              ),
-              SizedBox(height: 3.h,),
-           const Text('J.K. Rowling',style: Styles.style14,),
-              SizedBox(height: 3.h,),
-              Row(
-                children: [
-                  Text('19.99\$',style: Styles.style20.copyWith(fontWeight: FontWeight.bold),),
-                ],
-              ),
-            ],
+                SizedBox(height: 3.h,),
+             const Text('J.K. Rowling',style: Styles.style14,),
+                SizedBox(height: 3.h,),
+                Row(
+                  children: [
+                    Text('19.99\$',style: Styles.style20.copyWith(fontWeight: FontWeight.bold),),
+                   const Spacer(),
+                   const BookRating(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
