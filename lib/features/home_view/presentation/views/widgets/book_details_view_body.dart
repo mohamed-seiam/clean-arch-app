@@ -1,4 +1,5 @@
 import 'package:clean_arch_app/core/utilis/styles.dart';
+import 'package:clean_arch_app/features/home_view/presentation/views/widgets/book_rating.dart';
 import 'package:clean_arch_app/features/home_view/presentation/views/widgets/featured_list_view_item.dart';
 import 'package:flutter/material.dart';
 
@@ -35,6 +36,10 @@ class BookDetailsViewBody extends StatelessWidget {
               ),
           ),
            ),
+         const SizedBox(height: 18,),
+         const BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
         ],
       ),
     );
