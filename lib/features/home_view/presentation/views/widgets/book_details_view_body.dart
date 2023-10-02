@@ -1,3 +1,4 @@
+import 'package:clean_arch_app/core/utilis/styles.dart';
 import 'package:clean_arch_app/features/home_view/presentation/views/widgets/featured_list_view_item.dart';
 import 'package:flutter/material.dart';
 
@@ -15,9 +16,25 @@ class BookDetailsViewBody extends StatelessWidget {
         children: [
           const CustomBookDetailsAppBAr(),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * .17),
+            padding: EdgeInsets.symmetric(horizontal: width * .2),
             child: const FeaturedBookItem(),
           ),
+          const SizedBox(height: 43,),
+          const Text(
+            'The Jungle Book',
+            style: Styles.style30,
+          ),
+          const SizedBox(height: 8,),
+           Opacity(
+             opacity: .8,
+             child: Text(
+              'Rudyard Kipling',
+              style: Styles.style18.copyWith(
+                fontWeight:FontWeight.w500,
+                fontStyle: FontStyle.italic,
+              ),
+          ),
+           ),
         ],
       ),
     );
