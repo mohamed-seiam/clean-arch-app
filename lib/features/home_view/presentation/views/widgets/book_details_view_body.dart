@@ -3,6 +3,7 @@ import 'package:clean_arch_app/features/home_view/presentation/views/widgets/boo
 import 'package:clean_arch_app/features/home_view/presentation/views/widgets/featured_list_view_item.dart';
 import 'package:flutter/material.dart';
 
+import 'books_action.dart';
 import 'custom_appbar_book_details_view.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -20,28 +21,37 @@ class BookDetailsViewBody extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: width * .2),
             child: const FeaturedBookItem(),
           ),
-          const SizedBox(height: 43,),
+          const SizedBox(
+            height: 43,
+          ),
           const Text(
             'The Jungle Book',
             style: Styles.style30,
           ),
-          const SizedBox(height: 8,),
-           Opacity(
-             opacity: .8,
-             child: Text(
+          const SizedBox(
+            height: 8,
+          ),
+          Opacity(
+            opacity: .8,
+            child: Text(
               'Rudyard Kipling',
               style: Styles.style18.copyWith(
-                fontWeight:FontWeight.w500,
+                fontWeight: FontWeight.w500,
                 fontStyle: FontStyle.italic,
               ),
+            ),
           ),
-           ),
-         const SizedBox(height: 18,),
-         const BookRating(
+          const SizedBox(
+            height: 18,
+          ),
+          const BookRating(
             mainAxisAlignment: MainAxisAlignment.center,
           ),
+         const SizedBox(height: 37,),
+         const BookAction(),
         ],
       ),
     );
   }
 }
+
