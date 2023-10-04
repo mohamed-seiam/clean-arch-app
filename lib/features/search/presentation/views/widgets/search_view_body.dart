@@ -1,3 +1,4 @@
+import 'package:clean_arch_app/features/search/presentation/views/widgets/search_result_list_view.dart';
 import 'package:flutter/material.dart';
 import 'custom_search_textfield.dart';
 
@@ -11,10 +12,11 @@ class SearchViewBody extends StatelessWidget {
       child: Column(
         children: [
           CustomSearchTextField(),
+           SizedBox(height:20 ,),
+          Expanded(child: SearchResultListView()),
         ],
       ),
     );
   }
 }
-
 

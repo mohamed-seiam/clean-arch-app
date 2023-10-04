@@ -7,8 +7,8 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/utilis/assets.dart';
 import 'book_rating.dart';
 
-class BestSellerBooksListViewItem extends StatelessWidget {
-  const BestSellerBooksListViewItem({Key? key}) : super(key: key);
+class BooksListViewItem extends StatelessWidget {
+  const BooksListViewItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

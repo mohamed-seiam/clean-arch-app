@@ -1,9 +1,9 @@
 import 'package:clean_arch_app/core/utilis/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'best_seller_list_view.dart';
 import 'custom_app_bar.dart';
 import 'featured_book_list_view.dart';
-import 'best_seller_books_list_view_item.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({Key? key}) : super(key: key);
@@ -42,24 +42,6 @@ class HomeViewBody extends StatelessWidget {
   }
 }
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-      padding:EdgeInsets.zero,
-      itemCount: 10,
-        itemBuilder: (context,index){
-          return const Padding(
-            padding:  EdgeInsets.only(bottom: 30,top: 10),
-            child:  BestSellerBooksListViewItem(),
-          );
-        },
-    );
-  }
-}
 
 
 
