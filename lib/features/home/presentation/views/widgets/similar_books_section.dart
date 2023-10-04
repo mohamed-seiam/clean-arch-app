@@ -1,4 +1,4 @@
-import 'package:clean_arch_app/features/home_view/presentation/views/widgets/similar_books_listview.dart';
+import 'package:clean_arch_app/features/home/presentation/views/widgets/similar_books_listview.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utilis/styles.dart';
