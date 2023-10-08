@@ -1,19 +1,18 @@
-import 'items_model.dart';
-
-class BookModel {
+import 'book_model.dart';
+class BookModelResponse {
   String? kind;
   int? totalItems;
-  List<Items>? items;
+  List<BookModel>? books;
 
-  BookModel({this.kind, this.totalItems, this.items});
+  BookModelResponse({this.kind, this.totalItems, this.books});
 
-  BookModel.fromJson(Map<String, dynamic> json) {
+  BookModelResponse.fromJson(Map<String, dynamic> json) {
     kind = json['kind'];
     totalItems = json['totalItems'];
     if (json['items'] != null) {
-      items = <Items>[];
+      books = <BookModel>[];
       json['items'].forEach((v) {
-        items!.add(Items.fromJson(v));
+        books!.add(BookModel.fromJson(v));
       });
     }
   }

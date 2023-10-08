@@ -13,7 +13,7 @@ class VolumeInfo {
   String? description;
   List<IndustryIdentifiers>? industryIdentifiers;
   ReadingModes? readingModes;
-  int? pageCount;
+  num? pageCount;
   String? printType;
   List<String>? categories;
   String? maturityRating;
@@ -26,7 +26,7 @@ class VolumeInfo {
   String? infoLink;
   String? canonicalVolumeLink;
   double? averageRating;
-  int? ratingsCount;
+  num? ratingsCount;
 
   VolumeInfo(
       {this.title,
