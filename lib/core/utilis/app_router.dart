@@ -1,8 +1,9 @@
-import 'package:clean_arch_app/features/home_view/presentation/views/book_details_view.dart';
-import 'package:clean_arch_app/features/home_view/presentation/views/home_view.dart';
 import 'package:clean_arch_app/features/search/presentation/views/search_view.dart';
 import 'package:clean_arch_app/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../features/home/presentation/views/book_details_view.dart';
+import '../../features/home/presentation/views/home_view.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';
