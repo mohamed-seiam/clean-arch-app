@@ -10,7 +10,8 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   await Hive.initFlutter();
   Hive.registerAdapter(BookEntityAdapter());
-  await Hive.openBox(kFeaturedBox);
+  await Hive.openBox<BookEntity>(kFeaturedBox);
+  await Hive.openBox<BookEntity>(kNewestBox);
   runApp(const BooklyApp());
 }
 

@@ -7,3 +7,5 @@ const kDuration = Duration(seconds: 1);
 const kGtSectraFine = 'GT Sectra Fine';
 
 const kFeaturedBox = 'featured_box';
+
+const kNewestBox = 'newest_box';
