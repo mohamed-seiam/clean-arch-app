@@ -1,11 +1,15 @@
 import 'package:clean_arch_app/constant.dart';
 import 'package:clean_arch_app/core/utilis/app_router.dart';
+import 'package:clean_arch_app/features/home/domain/entites/book_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
 
 void main() async {
   await ScreenUtil.ensureScreenSize();
+  Hive.registerAdapter(BookEntityAdapter());
+  await Hive.openBox(kFeaturedBox);
   runApp(const BooklyApp());
 }
 
@@ -22,9 +26,8 @@ class BooklyApp extends StatelessWidget {
           return MaterialApp.router(
             theme: ThemeData.dark().copyWith(
               scaffoldBackgroundColor: kPrimaryColor,
-              textTheme: GoogleFonts.montserratTextTheme(
-                ThemeData.dark().textTheme
-              ),
+              textTheme:
+                  GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
               useMaterial3: true,
             ),
             routerConfig: AppRouter.router,
