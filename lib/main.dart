@@ -16,6 +16,7 @@ import 'core/utilis/bloc_observable.dart';
 import 'features/home/presentation/manager/newest_books_cubit/newest_books_cubit.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   await Hive.initFlutter();
   Hive.registerAdapter(BookEntityAdapter());
@@ -44,7 +45,7 @@ class BooklyApp extends StatelessWidget {
                     FetchFeaturedBooksUseCase(
                       getIt.get<HomeRepoImplementation>(),
                     ),
-                  );
+                  )..fetchFeaturedBooks();
                 },
               ),
               BlocProvider(

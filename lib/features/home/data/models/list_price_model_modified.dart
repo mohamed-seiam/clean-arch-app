@@ -1,5 +1,5 @@
 class ListPriceModel {
-  int? amountInMicros;
+  num? amountInMicros;
   String? currencyCode;
 
   ListPriceModel({this.amountInMicros, this.currencyCode});
