@@ -1,7 +1,6 @@
-import 'package:bloc/bloc.dart';
 import 'package:clean_arch_app/features/home/domain/use_cases/fetch_newest_books_use_case.dart';
-import 'package:meta/meta.dart';
-
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../domain/entites/book_entity.dart';
 
 part 'newest_books_state.dart';
