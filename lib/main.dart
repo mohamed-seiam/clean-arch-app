@@ -8,10 +8,9 @@ import 'package:clean_arch_app/features/home/domain/use_cases/fetch_newest_books
 import 'package:clean_arch_app/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/utilis/bloc_observable.dart';
 import 'features/home/presentation/manager/newest_books_cubit/newest_books_cubit.dart';
 

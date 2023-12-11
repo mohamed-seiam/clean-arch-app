@@ -6,7 +6,7 @@ import 'package:clean_arch_app/features/home/domain/entites/book_entity.dart';
 import '../../../../core/utilis/functions/save_books.dart';
 
 abstract class HomeRemoteDataSource {
-  Future<List<BookEntity>> fetchFeaturedBooks();
+  Future<List<BookEntity>> fetchFeaturedBooks({int pageNumber = 0});
 
   Future<List<BookEntity>> fetchNewestBooks();
 }
@@ -17,15 +17,14 @@ class HomeRemoteDataSourceImplementation extends HomeRemoteDataSource {
   HomeRemoteDataSourceImplementation({required this.apiServices});
 
   @override
-  Future<List<BookEntity>> fetchFeaturedBooks() async {
+  Future<List<BookEntity>> fetchFeaturedBooks({int pageNumber = 0}) async {
     var data = await apiServices.get(
-        endPoint: 'volumes?Filtering=free-ebooks&q=programming');
+        endPoint:
+            'volumes?Filtering=free-ebooks&q=programming&startIndex=${pageNumber * 10}');
     List<BookEntity> books = getBooksList(data);
-    cachingBooksData(books,kFeaturedBox);
+    cachingBooksData(books, kFeaturedBox);
     return books;
   }
-
-
 
   @override
   Future<List<BookEntity>> fetchNewestBooks() async {
